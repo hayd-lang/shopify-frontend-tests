@@ -1,20 +1,15 @@
 {
   "name": "ITAY BRANDS",
-  "baseUrl": "https://itaybrands.co.il/",
+  "baseUrl": "https://www.itaybrands.co.il",
+  "alertEmail": "digital-alerts@fox.co.il",
 
   "testCustomer": {
-    "id": "302633987",
-    "otp": "111111"
+    "id": "302633987"
   },
 
   "selectors": {
     "loginButton": "button.boa-account-button",
-    "loginPopup": "#ImageWithText--boa-verify-customer-id-popup",
-    "idInput": "getByPlaceholder:מספר ת.ז",
-    "sendOtpButton": "#send-otp-code",
-    "otpStepTitle": "#ImageWithText--boa-otp-code-popup .otp-login-title",
-    "otpInput": "#otpCodeId",
-    "verifyOtpButton": "#verify-otp-code"
+    "idInput": "#verifyCustomerId",
+    "submitButton": "#send-otp-code"
   }
-
 }
