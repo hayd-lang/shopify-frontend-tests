@@ -2,16 +2,25 @@
   "name": "FOOTLOCKER",
   "baseUrl": "https://www.footlocker.co.il",
   "alertEmail": "digital-alerts@fox.co.il",
+
   "enabledTests": ["cart", "cookie"],
-  
+
+  "testCollectionUrl": "/collections/all",
+
   "testCustomer": {
     "id": "302633987"
   },
+
+  "addToCartMode": "pdp",
 
   "selectors": {
     "loginButton": "button.boa-account-button",
     "idInput": "#verifyCustomerId",
     "submitButton": "#send-otp-code",
-    "cookieBanner": "popup-message.ai-popup-overlay"
+
+    "productCard": "a[href*='/products/']",
+    "addToCartButton": "button[name='add'], form[action*='/cart/add'] button[type='submit']",
+
+    "cookieBanner": "popup-message.ai-popup-overlay, text=/Cookies|קובצי Cookies|עוגיות|פרטיות/i"
   }
 }
