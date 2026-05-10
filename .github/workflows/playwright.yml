@@ -17,11 +17,11 @@ jobs:
 
       matrix:
         site:
-          # - fox
+          - fox
           - foxhome
           - laline
-          # - itaybrands
-          # - footlocker
+          - itaybrands
+          - footlocker
 
     steps:
       - uses: actions/checkout@v4

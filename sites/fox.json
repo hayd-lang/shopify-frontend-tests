@@ -10,6 +10,7 @@
   "selectors": {
     "loginButton": "button.boa-account-button",
     "idInput": "#verifyCustomerId",
-    "submitButton": "#send-otp-code"
+    "submitButton": "#send-otp-code",
+    "cookieBanner": "popup-message.ai-popup-overlay"
   }
 }

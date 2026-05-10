@@ -16,6 +16,7 @@
     "idInput": "#verifyCustomerId",
     "submitButton": "#send-otp-code",
     "productCard": "a[href*='/products/']",
-    "addToCartButton": "button[name='add'], form[action*='/cart/add'] button[type='submit']"
+    "addToCartButton": "button[name='add'], form[action*='/cart/add'] button[type='submit']",
+    "cookieBanner": "popup-message.ai-popup-overlay"
   }
 }
