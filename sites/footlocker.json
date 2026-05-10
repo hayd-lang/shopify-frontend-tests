@@ -19,7 +19,7 @@
     "submitButton": "#send-otp-code",
 
     "productCard": "a[href*='/products/']",
-    "addToCartButton": "button[data-add-to-cart], button.product-form__submit, button[name='add']",
+    "addToCartButton": "#AddToCart, button[data-product-add-to-cart-button], .product-form__add-button",
     "cookieBanner": "popup-message.ai-popup-overlay"
       }
 }
