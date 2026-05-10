@@ -26,3 +26,11 @@ jobs:
         run: npx playwright test tests/critical/login-id-to-otp.spec.ts --project=chromium
         env:
           SITE: foxhome
+
+  on:
+  push:
+
+  schedule:
+    - cron: "*/60 * * * *"
+
+  workflow_dispatch:
