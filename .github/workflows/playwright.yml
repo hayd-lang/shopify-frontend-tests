@@ -4,7 +4,7 @@ on:
   push:
 
   schedule:
-    - cron: "*/60 * * * *"
+    - cron: "0 * * * *"
 
   workflow_dispatch:
 
@@ -17,11 +17,11 @@ jobs:
 
       matrix:
         site:
-          - fox
+          # - fox
           - foxhome
           - laline
-          - itaybrands
-          - footlocker
+          # - itaybrands
+          # - footlocker
 
     steps:
       - uses: actions/checkout@v4
