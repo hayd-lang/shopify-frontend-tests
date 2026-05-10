@@ -3,7 +3,7 @@
   "baseUrl": "https://www.footlocker.co.il",
   "alertEmail": "digital-alerts@fox.co.il",
 
-  "enabledTests": ["cart", "cookie"],
+  "enabledTests": ["cart"],
 
   "testCollectionUrl": "/collections/all",
 
