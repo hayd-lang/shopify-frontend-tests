@@ -9,11 +9,13 @@
 
   "testCollectionUrl": "/collections/all",
 
+  "addToCartMode": "pdp",
+
   "selectors": {
     "loginButton": "button.boa-account-button",
     "idInput": "#verifyCustomerId",
     "submitButton": "#send-otp-code",
     "productCard": "a[href*='/products/']",
-    "addToCartButton": "form[action*='/cart/add'] button[type='submit'], button.product-item__quick-buy-button"
+    "addToCartButton": "button[name='add'], form[action*='/cart/add'] button[type='submit']"
   }
 }

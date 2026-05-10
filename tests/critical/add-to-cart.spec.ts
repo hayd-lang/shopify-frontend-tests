@@ -3,34 +3,61 @@ import { getSiteConfig } from '../../helpers/site-config';
 
 const site = getSiteConfig();
 
-test(`@critical ${site.name} - collection quick add to cart works`, async ({ page }) => {
-  await page.goto(site.baseUrl + site.testCollectionUrl, {
-    waitUntil: 'domcontentloaded',
-    timeout: 30000,
-  });
+test(`@critical ${site.name} - add to cart works`, async ({ page }) => {
 
-  const productCard = page.locator(site.selectors.productCard).first();
+  await page.goto(
+    site.baseUrl + site.testCollectionUrl,
+    {
+      waitUntil: 'domcontentloaded',
+      timeout: 30000,
+    }
+  );
 
-  await expect(productCard).toBeVisible({
+  const firstProduct = page
+    .locator(site.selectors.productCard)
+    .first();
+
+  await expect(firstProduct).toBeVisible({
     timeout: 15000,
   });
 
-  await productCard.hover();
+  // QUICK ADD FLOW
+  if (site.addToCartMode === 'quick') {
 
-  const addToCartButton = page.locator(site.selectors.addToCartButton).first();
+    await firstProduct.hover();
 
-  await expect(addToCartButton).toBeVisible({
-    timeout: 15000,
-  });
+    const addToCartButton = page
+      .locator(site.selectors.addToCartButton)
+      .first();
 
-  await addToCartButton.click();
+    await expect(addToCartButton).toBeVisible({
+      timeout: 15000,
+    });
+
+    await addToCartButton.click();
+
+  } else {
+
+    // PDP FLOW
+    await firstProduct.click();
+
+    await expect(page).toHaveURL(/\/products\//, {
+      timeout: 15000,
+    });
+
+    const addToCartButton = page
+      .locator(site.selectors.addToCartButton)
+      .first();
+
+    await expect(addToCartButton).toBeVisible({
+      timeout: 15000,
+    });
+
+    await addToCartButton.click();
+  }
 
   await page.waitForTimeout(5000);
 
-  await page.screenshot({
-    path: `after-add-to-cart-${site.name}.png`,
-    fullPage: true,
-  });
-
   await expect(page.locator('body')).toBeVisible();
+
 });

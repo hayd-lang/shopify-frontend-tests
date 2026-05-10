@@ -14,6 +14,7 @@
     "idInput": "#verifyCustomerId",
     "submitButton": "#send-otp-code",
     "productCard": "a[href*='/products/']",
-    "addToCartButton": "form[action*='/cart/add'] button[type='submit'], button.product-item__quick-buy-button"
+    "addToCartButton": "form[action*='/cart/add'] button[type='submit'], button.product-item__quick-buy-button",
+    "addToCartMode": "quick"
   }
 }
