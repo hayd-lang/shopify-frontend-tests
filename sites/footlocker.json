@@ -2,7 +2,8 @@
   "name": "FOOTLOCKER",
   "baseUrl": "https://www.footlocker.co.il",
   "alertEmail": "digital-alerts@fox.co.il",
-
+  "enabledTests": ["cart", "cookie"],
+  
   "testCustomer": {
     "id": "302633987"
   },

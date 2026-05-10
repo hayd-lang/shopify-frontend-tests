@@ -4,6 +4,11 @@ import { getSiteConfig } from '../../helpers/site-config';
 const site = getSiteConfig();
 
 test(`@critical ${site.name} - login popup flow works`, async ({ page }) => {
+  test.skip(
+  site.enabledTests && !site.enabledTests.includes('login'),
+  `${site.name} login test is disabled`
+  );
+
   await page.goto(site.baseUrl, {
     waitUntil: 'domcontentloaded',
     timeout: 30000,

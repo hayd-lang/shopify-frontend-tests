@@ -4,6 +4,10 @@ import { getSiteConfig } from '../../helpers/site-config';
 const site = getSiteConfig();
 
 test(`@critical ${site.name} - add to cart works`, async ({ page }) => {
+  test.skip(
+    site.enabledTests && !site.enabledTests.includes('cart'),
+    `${site.name} cart test is disabled`
+  );
 
   await page.goto(
     site.baseUrl + site.testCollectionUrl,

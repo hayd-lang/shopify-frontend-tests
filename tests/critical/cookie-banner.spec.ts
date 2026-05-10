@@ -4,6 +4,10 @@ import { getSiteConfig } from '../../helpers/site-config';
 const site = getSiteConfig();
 
 test(`@critical ${site.name} - cookie banner exists`, async ({ page, context }) => {
+	test.skip(
+	  site.enabledTests && !site.enabledTests.includes('cookie'),
+	  `${site.name} cookie test is disabled`
+	);
 
   await context.clearCookies();
 

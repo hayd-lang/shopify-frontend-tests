@@ -2,6 +2,7 @@
   "name": "LALINE",
   "baseUrl": "https://www.laline.co.il",
   "alertEmail": "digital-alerts@fox.co.il",
+  "enabledTests": ["login", "cart", "cookie"],
 
   "testCustomer": {
     "id": "302633987"
