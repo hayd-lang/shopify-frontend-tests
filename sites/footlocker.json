@@ -3,23 +3,13 @@
   "baseUrl": "https://www.footlocker.co.il",
   "alertEmail": "digital-alerts@fox.co.il",
 
-  "enabledTests": ["cart"],
-
-  "testCollectionUrl": "/collections/all",
+  "enabledTests": ["cookie"],
 
   "testCustomer": {
     "id": "302633987"
   },
 
-  "addToCartMode": "pdp",
-
   "selectors": {
-    "loginButton": "button.boa-account-button",
-    "idInput": "#verifyCustomerId",
-    "submitButton": "#send-otp-code",
-
-    "productCard": "a[href*='/products/']",
-    "addToCartButton": "#AddToCart, button[data-product-add-to-cart-button], .product-form__add-button",
     "cookieBanner": "popup-message.ai-popup-overlay"
-      }
+  }
 }
