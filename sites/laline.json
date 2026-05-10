@@ -7,9 +7,13 @@
     "id": "302633987"
   },
 
+  "testCollectionUrl": "/collections/all",
+
   "selectors": {
     "loginButton": "button.boa-account-button",
     "idInput": "#verifyCustomerId",
-    "submitButton": "#send-otp-code"
+    "submitButton": "#send-otp-code",
+    "productCard": "a[href*='/products/']",
+    "addToCartButton": "form[action*='/cart/add'] button[type='submit'], button.product-item__quick-buy-button"
   }
 }
