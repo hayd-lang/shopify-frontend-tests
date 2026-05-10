@@ -14,6 +14,6 @@
     "idInput": "#verifyCustomerId",
     "submitButton": "#send-otp-code",
     "productCard": "a[href*='/products/']",
-    "addToCartButton": "button[name='add'], button[type='submit']"
+    "addToCartButton": "product-form button[name='add'], form[action*='/cart/add'] button[type='submit'], button.product-form__add-button"+
   }
 }
