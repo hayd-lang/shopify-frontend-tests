@@ -1,16 +1,27 @@
-name: Playwright Tests
+name: Login Monitoring
 
 on:
   push:
 
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/60 * * * *"
 
   workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        site:
+          - fox
+          - foxhome
+          - laline
+          - itaybrands
+          - footlocker
 
     steps:
       - uses: actions/checkout@v4
@@ -25,7 +36,7 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Run FOX HOME login monitoring
+      - name: Run login monitoring
         run: npx playwright test tests/critical/login-id-to-otp.spec.ts --project=chromium
         env:
-          SITE: foxhome
+          SITE: ${{ matrix.site }}
