@@ -17,6 +17,6 @@
     "productCard": "a[href*='/products/']",
     "addToCartButton": "form[action*='/cart/add'] button[type='submit'], button.product-item__quick-buy-button",
     "addToCartMode": "quick",
-    "cookieBanner": "popup-message.ai-popup-overlay"
+"cookieBanner": "wrong-selector"
   }
 }
