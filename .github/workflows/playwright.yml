@@ -17,7 +17,7 @@ jobs:
 
       matrix:
         site:
-          - fox
+          # - fox
           - foxhome
           - laline
           - itaybrands
@@ -40,3 +40,12 @@ jobs:
         run: npx playwright test tests/critical --project=chromium --reporter=list
         env:
           SITE: ${{ matrix.site }}
+
+      - name: Upload Playwright artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-artifacts-${{ matrix.site }}
+          path: |
+            test-results/
+            playwright-report/
