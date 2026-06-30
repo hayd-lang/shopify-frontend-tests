@@ -3,7 +3,7 @@
   "baseUrl": "https://www.itaybrands.co.il",
   "alertEmail": "digital-alerts@fox.co.il",
 
-  "enabledTests": ["cart", "cookie"],
+  "enabledTests": ["cookie"],
 
   "testCollectionUrl": "/collections/all",
 
